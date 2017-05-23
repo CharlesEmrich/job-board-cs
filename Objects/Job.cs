@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using JobBoard.Objects;
+using System;
 
 namespace JobBoard.Objects
 {
   public class Job
   {
+    private int _id;
     private string _title;
     private string _description;
     private Contact _contactInfo;
@@ -12,11 +14,19 @@ namespace JobBoard.Objects
 
     public Job (string title, string description, Contact contactInfo)
     {
+      _id = _instances.Count;
       _title = title;
       _description = description;
       _contactInfo = contactInfo;
+
+      _instances.Add(this);
+      Console.WriteLine(this.GetId());
     }
 
+    public int GetId()
+    {
+      return _id;
+    }
     public string GetTitle()
     {
       return _title;
@@ -53,6 +63,10 @@ namespace JobBoard.Objects
     public static void ClearAll()
     {
       _instances.Clear();
+    }
+    public static Job SearchJobs(int searchId)
+    {
+      return _instances[searchId];
     }
   }
 }

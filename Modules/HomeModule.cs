@@ -20,7 +20,6 @@ namespace JobBoard
         Job newJob = new Job (Request.Form["new-title"],
                               Request.Form["new-description"],
                               newContact);
-        newJob.Save();
         return View["job_added.cshtml", newJob];
       };
       Post["/jobs_cleared"] = _ => {
