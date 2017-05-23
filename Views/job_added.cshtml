@@ -5,6 +5,8 @@
 <h1>You've added a new job!</h1>
 <p>@Model.GetTitle()</p>
 <p>@Model.GetDescription()</p>
-<p>@Model.GetContactInfo()</p>
+<p>@Model.GetContactInfo().GetName()</p>
+<p>@Model.GetContactInfo().GetTelephone()</p>
+<p>@Model.GetContactInfo().GetEmail()</p>
 <p><a href="/">Add another job</a></p>
 <p><a href="/view_all_jobs">View current jobs</a></p>

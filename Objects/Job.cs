@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using JobBoard.Objects;
 
 namespace JobBoard.Objects
 {
@@ -6,10 +7,10 @@ namespace JobBoard.Objects
   {
     private string _title;
     private string _description;
-    private string _contactInfo;
+    private Contact _contactInfo;
     private static List<Job> _instances = new List<Job> {};
 
-    public Job (string title, string description, string contactInfo)
+    public Job (string title, string description, Contact contactInfo)
     {
       _title = title;
       _description = description;
@@ -32,11 +33,11 @@ namespace JobBoard.Objects
     {
       _description = newDescription;
     }
-    public string GetContactInfo()
+    public Contact GetContactInfo()
     {
       return _contactInfo;
     }
-    public void SetContactInfo(string newContactInfo)
+    public void SetContactInfo(Contact newContactInfo)
     {
       _contactInfo = newContactInfo;
     }

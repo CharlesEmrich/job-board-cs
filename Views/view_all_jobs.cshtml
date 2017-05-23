@@ -8,8 +8,10 @@
   {
     <li>@posting.GetTitle()</li>
     <ul>
-      <li>@posting.GetDescription()</li>
-      <li>@posting.GetContactInfo()</li>
+      <li>Job Description: @posting.GetDescription()</li>
+      <li>Contact Name: @posting.GetContactInfo().GetName()</li>
+      <li>Contact Phone: @posting.GetContactInfo().GetTelephone()</li>
+      <li>Contact Email: @posting.GetContactInfo().GetEmail()</li>
     </ul>
   }
 </ul>
