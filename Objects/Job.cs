@@ -20,7 +20,6 @@ namespace JobBoard.Objects
       _contactInfo = contactInfo;
 
       _instances.Add(this);
-      Console.WriteLine(this.GetId());
     }
 
     public int GetId()
